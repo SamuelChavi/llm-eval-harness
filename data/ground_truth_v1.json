@@ -1,0 +1,16 @@
+{
+  "version": "v1",
+  "notes": "Public general-knowledge eval set. Some entries carry metadata used to demonstrate root-cause classification (a malformed input; a stale ground-truth).",
+  "cases": [
+    { "id": "capital-fr", "input": "What is the capital of France?", "expected": "Paris", "category": "geography" },
+    { "id": "water-boil", "input": "At what temperature in Celsius does water boil at sea level?", "expected": "100", "category": "science" },
+    { "id": "mars-moons", "input": "How many moons does Mars have?", "expected": "2", "category": "astronomy" },
+    { "id": "speed-light", "input": "Approximate speed of light in vacuum, in km/s?", "expected": "299792", "category": "physics" },
+    { "id": "romeo-author", "input": "Who wrote the play Romeo and Juliet?", "expected": "Shakespeare", "category": "literature" },
+    { "id": "everest-h", "input": "Height of Mount Everest in meters?", "expected": "8848", "category": "geography", "gt_suspect": true, "gt_note": "Re-surveyed in 2020 to 8849 m; the expected value here (8848) is stale." },
+    { "id": "translate-empty", "input": "Translate the following into Spanish:", "expected": "n/a", "category": "nlp", "malformed": true, "malformed_note": "No source text was provided in the prompt." },
+    { "id": "largest-ocean", "input": "What is the largest ocean on Earth?", "expected": "Pacific", "category": "geography" },
+    { "id": "python-author", "input": "Who created the Python programming language?", "expected": "Guido van Rossum", "category": "tech" },
+    { "id": "one-prime", "input": "Is the number 1 a prime number?", "expected": "No", "category": "math" }
+  ]
+}
